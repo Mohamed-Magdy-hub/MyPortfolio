@@ -3,8 +3,13 @@ import { Mail, Phone, MapPin, Download, ExternalLink } from "lucide-react";
 
 export function HeroSection() {
   const handleDownloadCV = () => {
-    // In a real implementation, this would download the actual CV file
-    alert("CV download will be available soon. Please contact me directly for the latest version.");
+    // Create a link element to download the CV
+    const link = document.createElement('a');
+    link.href = '/attached_assets/Mohamed-Magdy-Mahmoud-Multicloud-certified-resume-DevOps.pdf';
+    link.download = 'Mohamed-Magdy-Mahmoud-Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const scrollToContact = () => {
@@ -29,7 +34,7 @@ export function HeroSection() {
             Multi-Cloud Engineer & DevOps Specialist
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed" data-testid="hero-description">
-            AWS & Azure certified professional with hands-on experience in cloud automation, CI/CD pipelines, and Infrastructure as Code.
+            AWS & Azure certified professional with 1+ years of hands-on experience in cloud automation, CI/CD pipelines, and Infrastructure as Code.
             Passionate about designing scalable, secure cloud infrastructures and streamlining deployment workflows across multi-cloud environments.
           </p>
 
