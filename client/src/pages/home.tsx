@@ -1,12 +1,16 @@
 import { useEffect } from "react";
 import { Navigation } from "@/components/navigation";
+import { CoverSection } from "@/components/cover-section";
 import { HeroSection } from "@/components/hero-section";
-import { SkillsSection } from "@/components/skills-section";
-import { CertificationsSection } from "@/components/certifications-section";
-import { ProjectsSection } from "@/components/projects-section";
 import { ExperienceSection } from "@/components/experience-section";
 import { EducationSection } from "@/components/education-section";
+import { SkillsSection } from "@/components/skills-section";
+import { CertificationsSection } from "@/components/certifications-section";
+import { OfferedServicesSection } from "@/components/offered-services-section";
+import { ProjectsSection } from "@/components/projects-section";
+import { CTASection } from "@/components/cta-section";
 import { ContactSection } from "@/components/contact-section";
+import { ThankYouSection } from "@/components/thank-you-section";
 
 export default function Home() {
   useEffect(() => {
@@ -38,13 +42,17 @@ export default function Home() {
     <div className="min-h-screen">
       <Navigation />
       <main>
+        <CoverSection />
         <HeroSection />
-        <SkillsSection />
-        <CertificationsSection />
-        <ProjectsSection />
         <ExperienceSection />
         <EducationSection />
+        <SkillsSection />
+        <CertificationsSection />
+        <OfferedServicesSection />
+        <ProjectsSection />
+        <CTASection />
         <ContactSection />
+        <ThankYouSection />
       </main>
     </div>
   );

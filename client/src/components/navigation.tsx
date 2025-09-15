@@ -8,11 +8,13 @@ export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
+    { href: "#cover", label: "Home" },
     { href: "#about", label: "About" },
-    { href: "#skills", label: "Skills" },
-    { href: "#certifications", label: "Certifications" },
-    { href: "#projects", label: "Projects" },
     { href: "#experience", label: "Experience" },
+    { href: "#education", label: "Education" },
+    { href: "#skills", label: "Skills" },
+    { href: "#services", label: "Services" },
+    { href: "#projects", label: "Projects" },
     { href: "#contact", label: "Contact" },
   ];
 
