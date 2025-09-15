@@ -1,0 +1,936 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Magdy Mahmoud - Multi-Cloud & DevOps Engineer</title>
+    <meta name="description" content="Professional portfolio of Mohamed Magdy Mahmoud, AWS & Azure certified Multi-Cloud Engineer specializing in DevOps, CI/CD, and Infrastructure as Code.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                borderRadius: {
+                    lg: "var(--radius)",
+                    md: "calc(var(--radius) - 2px)",
+                    sm: "calc(var(--radius) - 4px)",
+                },
+                colors: {
+                    background: "var(--background)",
+                    foreground: "var(--foreground)",
+                    card: {
+                        DEFAULT: "var(--card)",
+                        foreground: "var(--card-foreground)",
+                    },
+                    popover: {
+                        DEFAULT: "var(--popover)",
+                        foreground: "var(--popover-foreground)",
+                    },
+                    primary: {
+                        DEFAULT: "var(--primary)",
+                        foreground: "var(--primary-foreground)",
+                    },
+                    secondary: {
+                        DEFAULT: "var(--secondary)",
+                        foreground: "var(--secondary-foreground)",
+                    },
+                    muted: {
+                        DEFAULT: "var(--muted)",
+                        foreground: "var(--muted-foreground)",
+                    },
+                    accent: {
+                        DEFAULT: "var(--accent)",
+                        foreground: "var(--accent-foreground)",
+                    },
+                    destructive: {
+                        DEFAULT: "var(--destructive)",
+                        foreground: "var(--destructive-foreground)",
+                    },
+                    border: "var(--border)",
+                    input: "var(--input)",
+                    ring: "var(--ring)",
+                },
+                fontFamily: {
+                    sans: ["Inter", "sans-serif"],
+                    mono: ["JetBrains Mono", "monospace"],
+                }
+            }
+        }
+    };
+    </script>
+    
+    <style>
+        :root {
+            --radius: 0.5rem;
+            --background: hsl(210 40% 98%);
+            --foreground: hsl(222.2 84% 4.9%);
+            --card: hsl(0 0% 100%);
+            --card-foreground: hsl(222.2 84% 4.9%);
+            --popover: hsl(0 0% 100%);
+            --popover-foreground: hsl(222.2 84% 4.9%);
+            --primary: hsl(217.2 91.2% 59.8%);
+            --primary-foreground: hsl(0 0% 98%);
+            --secondary: hsl(210 40% 96%);
+            --secondary-foreground: hsl(222.2 84% 4.9%);
+            --muted: hsl(210 40% 96%);
+            --muted-foreground: hsl(215.4 16.3% 46.9%);
+            --accent: hsl(210 40% 96%);
+            --accent-foreground: hsl(222.2 84% 4.9%);
+            --destructive: hsl(0 84.2% 60.2%);
+            --destructive-foreground: hsl(210 40% 98%);
+            --border: hsl(214.3 31.8% 91.4%);
+            --input: hsl(214.3 31.8% 91.4%);
+            --ring: hsl(217.2 91.2% 59.8%);
+        }
+        
+        .dark {
+            --background: hsl(222.2 84% 4.9%);
+            --foreground: hsl(210 40% 98%);
+            --card: hsl(222.2 84% 4.9%);
+            --card-foreground: hsl(210 40% 98%);
+            --popover: hsl(222.2 84% 4.9%);
+            --popover-foreground: hsl(210 40% 98%);
+            --primary: hsl(217.2 91.2% 59.8%);
+            --primary-foreground: hsl(222.2 84% 4.9%);
+            --secondary: hsl(217.2 32.6% 17.5%);
+            --secondary-foreground: hsl(210 40% 98%);
+            --muted: hsl(217.2 32.6% 17.5%);
+            --muted-foreground: hsl(215 20.2% 65.1%);
+            --accent: hsl(217.2 32.6% 17.5%);
+            --accent-foreground: hsl(210 40% 98%);
+            --destructive: hsl(0 62.8% 30.6%);
+            --destructive-foreground: hsl(210 40% 98%);
+            --border: hsl(217.2 32.6% 17.5%);
+            --input: hsl(217.2 32.6% 17.5%);
+            --ring: hsl(217.2 91.2% 59.8%);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .skill-tag {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            transform: translateY(-2px);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-4px);
+        }
+        
+        .navbar-blur {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-background text-foreground transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 navbar-blur bg-background/80 border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-primary">Mohamed Magdy</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#skills" class="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+                        <a href="#certifications" class="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Certifications</a>
+                        <a href="#projects" class="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="#experience" class="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
+                        <a href="#contact" class="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Theme Toggle & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors">
+                        <i class="fas fa-moon dark:hidden text-foreground"></i>
+                        <i class="fas fa-sun hidden dark:block text-foreground"></i>
+                    </button>
+                    
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden">
+                        <button id="mobile-menu-btn" class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors">
+                            <i class="fas fa-bars text-foreground"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">About</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Skills</a>
+                <a href="#certifications" class="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Certifications</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Projects</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Experience</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center animate-fade-in-up">
+                <!-- Professional headshot placeholder -->
+                <div class="mb-8 flex justify-center">
+                    <div class="w-32 h-32 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-xl">
+                        MM
+                    </div>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-bold text-foreground mb-4">
+                    Mohamed Magdy Mahmoud
+                </h1>
+                <p class="text-xl md:text-2xl text-muted-foreground mb-6">
+                    Multi-Cloud Engineer & DevOps Specialist
+                </p>
+                <p class="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
+                    AWS & Azure certified professional with hands-on experience in cloud automation, CI/CD pipelines, and Infrastructure as Code. 
+                    Passionate about designing scalable, secure cloud infrastructures and streamlining deployment workflows across multi-cloud environments.
+                </p>
+                
+                <!-- Contact Info -->
+                <div class="flex flex-wrap justify-center gap-6 mb-8 text-muted-foreground">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-envelope text-primary"></i>
+                        <span>mohamed.shaheed.mm@gmail.com</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-phone text-primary"></i>
+                        <span>+20 1016673396</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt text-primary"></i>
+                        <span>Alexandria, Egypt</span>
+                    </div>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Get In Touch
+                    </a>
+                    <button id="download-cv" class="inline-flex items-center px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-accent transition-colors font-medium">
+                        <i class="fas fa-download mr-2"></i>
+                        Download CV
+                    </button>
+                    <a href="https://www.linkedin.com/in/mohamed-magdy-5051611a0/" target="_blank" class="inline-flex items-center px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-accent transition-colors font-medium">
+                        <i class="fab fa-linkedin mr-2"></i>
+                        LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-muted px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Technical Skills</h2>
+                <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    Comprehensive expertise across cloud platforms, DevOps tools, and modern infrastructure technologies
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Cloud Platforms -->
+                <div class="bg-card rounded-xl p-6 shadow-lg">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-cloud text-4xl text-primary mb-2"></i>
+                        <h3 class="text-xl font-semibold text-card-foreground">Cloud Platforms</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded-full text-sm font-medium">AWS</span>
+                        <span class="skill-tag px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded-full text-sm font-medium">Azure</span>
+                        <span class="skill-tag px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded-full text-sm font-medium">EC2</span>
+                        <span class="skill-tag px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded-full text-sm font-medium">S3</span>
+                        <span class="skill-tag px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded-full text-sm font-medium">EKS</span>
+                        <span class="skill-tag px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded-full text-sm font-medium">RDS</span>
+                    </div>
+                </div>
+                
+                <!-- CI/CD & Automation -->
+                <div class="bg-card rounded-xl p-6 shadow-lg">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-cogs text-4xl text-green-600 mb-2"></i>
+                        <h3 class="text-xl font-semibold text-card-foreground">CI/CD & Automation</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 rounded-full text-sm font-medium">Jenkins</span>
+                        <span class="skill-tag px-3 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 rounded-full text-sm font-medium">GitHub Actions</span>
+                        <span class="skill-tag px-3 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 rounded-full text-sm font-medium">Terraform</span>
+                        <span class="skill-tag px-3 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 rounded-full text-sm font-medium">CloudFormation</span>
+                        <span class="skill-tag px-3 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 rounded-full text-sm font-medium">Ansible</span>
+                    </div>
+                </div>
+                
+                <!-- Containerization -->
+                <div class="bg-card rounded-xl p-6 shadow-lg">
+                    <div class="text-center mb-4">
+                        <i class="fab fa-docker text-4xl text-blue-500 mb-2"></i>
+                        <h3 class="text-xl font-semibold text-card-foreground">Containerization</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 rounded-full text-sm font-medium">Docker</span>
+                        <span class="skill-tag px-3 py-1 bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 rounded-full text-sm font-medium">Kubernetes</span>
+                        <span class="skill-tag px-3 py-1 bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 rounded-full text-sm font-medium">EKS</span>
+                    </div>
+                </div>
+                
+                <!-- Programming & Scripting -->
+                <div class="bg-card rounded-xl p-6 shadow-lg">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-code text-4xl text-orange-600 mb-2"></i>
+                        <h3 class="text-xl font-semibold text-card-foreground">Programming</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200 rounded-full text-sm font-medium">Python</span>
+                        <span class="skill-tag px-3 py-1 bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200 rounded-full text-sm font-medium">Bash</span>
+                        <span class="skill-tag px-3 py-1 bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200 rounded-full text-sm font-medium">PowerShell</span>
+                        <span class="skill-tag px-3 py-1 bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200 rounded-full text-sm font-medium">Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Certifications & Training</h2>
+                <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    Industry-recognized certifications and continuous learning achievements
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- AWS Certification -->
+                <div class="bg-card rounded-xl p-6 shadow-lg text-center">
+                    <div class="mb-4">
+                        <div class="w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-aws text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-card-foreground mb-2">AWS Certified</h3>
+                        <p class="text-muted-foreground">Cloud Practitioner</p>
+                    </div>
+                    <div class="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-3">
+                        <span class="text-orange-700 dark:text-orange-300 font-medium">Verified Certification</span>
+                    </div>
+                </div>
+                
+                <!-- Azure Certification -->
+                <div class="bg-card rounded-xl p-6 shadow-lg text-center">
+                    <div class="mb-4">
+                        <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-microsoft text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-card-foreground mb-2">Microsoft Certified</h3>
+                        <p class="text-muted-foreground">Azure Fundamentals</p>
+                    </div>
+                    <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
+                        <span class="text-blue-700 dark:text-blue-300 font-medium">Verified Certification</span>
+                    </div>
+                </div>
+                
+                <!-- DevOps Training -->
+                <div class="bg-card rounded-xl p-6 shadow-lg text-center md:col-span-2 lg:col-span-1">
+                    <div class="mb-4">
+                        <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-card-foreground mb-2">DevOps Training</h3>
+                        <p class="text-muted-foreground">Digital Egyptian Pioneers Initiative</p>
+                    </div>
+                    <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
+                        <span class="text-green-700 dark:text-green-300 font-medium">Round Three - 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-muted px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Featured Projects</h2>
+                <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    Hands-on experience with real-world DevOps and cloud infrastructure projects
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1: CI/CD Pipeline -->
+                <div class="project-card bg-card rounded-xl p-6 shadow-lg">
+                    <div class="mb-4">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fas fa-infinity text-primary text-xl"></i>
+                            <h3 class="text-xl font-semibold text-card-foreground">CI/CD Pipeline for Docker & Kubernetes</h3>
+                        </div>
+                        <p class="text-muted-foreground mb-4">
+                            Designed and implemented Jenkins pipelines to automate build, test, and deployment of Dockerized applications to Kubernetes clusters (EKS).
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded text-xs">Jenkins</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 rounded text-xs">Docker</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 rounded text-xs">Kubernetes</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200 rounded text-xs">EKS</span>
+                        </div>
+                        <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
+                            <span class="text-green-700 dark:text-green-300 font-medium">
+                                <i class="fas fa-chart-line mr-2"></i>
+                                Reduced manual deployment time by 30%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: GitOps -->
+                <div class="project-card bg-card rounded-xl p-6 shadow-lg">
+                    <div class="mb-4">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fab fa-git-alt text-primary text-xl"></i>
+                            <h3 class="text-xl font-semibold text-card-foreground">GitOps with Terraform & GitHub Actions</h3>
+                        </div>
+                        <p class="text-muted-foreground mb-4">
+                            Applied GitOps principles to manage infrastructure declaratively using Terraform (IaC). Automated deployments via GitHub Actions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 rounded text-xs">Terraform</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200 rounded text-xs">GitHub Actions</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded text-xs">GitOps</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 rounded text-xs">IaC</span>
+                        </div>
+                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
+                            <span class="text-blue-700 dark:text-blue-300 font-medium">
+                                <i class="fas fa-code-branch mr-2"></i>
+                                Version-controlled infrastructure deployments
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Kubernetes Deployment -->
+                <div class="project-card bg-card rounded-xl p-6 shadow-lg">
+                    <div class="mb-4">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fas fa-dharmachakra text-primary text-xl"></i>
+                            <h3 class="text-xl font-semibold text-card-foreground">Kubernetes Cluster Deployment</h3>
+                        </div>
+                        <p class="text-muted-foreground mb-4">
+                            Deployed and managed applications on Kubernetes, optimizing resource allocation and scalability for production workloads.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded text-xs">Kubernetes</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 rounded text-xs">Resource Management</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 rounded text-xs">Scalability</span>
+                        </div>
+                        <div class="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-3">
+                            <span class="text-purple-700 dark:text-purple-300 font-medium">
+                                <i class="fas fa-expand-arrows-alt mr-2"></i>
+                                Optimized for production scalability
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4: Docker Containerization -->
+                <div class="project-card bg-card rounded-xl p-6 shadow-lg">
+                    <div class="mb-4">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fab fa-docker text-primary text-xl"></i>
+                            <h3 class="text-xl font-semibold text-card-foreground">Docker Containerization</h3>
+                        </div>
+                        <p class="text-muted-foreground mb-4">
+                            Containerized applications for consistent development and production environments, improving deployment reliability.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded text-xs">Docker</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 rounded text-xs">Containerization</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200 rounded text-xs">DevOps</span>
+                        </div>
+                        <div class="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-3">
+                            <span class="text-orange-700 dark:text-orange-300 font-medium">
+                                <i class="fas fa-shield-alt mr-2"></i>
+                                Enhanced deployment reliability
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 5: Ansible Automation -->
+            <div class="mt-8">
+                <div class="project-card bg-card rounded-xl p-6 shadow-lg max-w-4xl mx-auto">
+                    <div class="mb-4">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fas fa-robot text-primary text-xl"></i>
+                            <h3 class="text-xl font-semibold text-card-foreground">Ansible Automation</h3>
+                        </div>
+                        <p class="text-muted-foreground mb-4">
+                            Automated configuration management for servers using Ansible playbooks, significantly reducing manual setup time and ensuring consistent server configurations across environments.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 rounded text-xs">Ansible</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 rounded text-xs">Configuration Management</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 rounded text-xs">Automation</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 rounded text-xs">Playbooks</span>
+                        </div>
+                        <div class="bg-red-50 dark:bg-red-900/20 rounded-lg p-3">
+                            <span class="text-red-700 dark:text-red-300 font-medium">
+                                <i class="fas fa-tachometer-alt mr-2"></i>
+                                Reduced setup time by 40%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Professional Experience</h2>
+                <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    Progressive career journey in IT support, systems administration, and technical solutions
+                </p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-border hidden md:block"></div>
+                
+                <div class="space-y-12">
+                    <!-- Current Position -->
+                    <div class="relative flex items-start">
+                        <div class="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background hidden md:block"></div>
+                        <div class="md:ml-16 bg-card rounded-xl p-6 shadow-lg w-full">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-xl font-semibold text-card-foreground">IT Support Specialist</h3>
+                                <span class="text-sm text-muted-foreground bg-primary/10 px-3 py-1 rounded-full">01/2024 - Present</span>
+                            </div>
+                            <p class="text-primary font-medium mb-3">Koncare Trading</p>
+                            <ul class="text-muted-foreground space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-500 mt-1 text-sm"></i>
+                                    <span>Administer all aspects of Active Directory policy including creating and managing end-user accounts</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-500 mt-1 text-sm"></i>
+                                    <span>Provided L1/L2 support for hardware, software, and network troubleshooting</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-500 mt-1 text-sm"></i>
+                                    <span>Monitored and maintained network infrastructure including switches and routers</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Previous Position -->
+                    <div class="relative flex items-start">
+                        <div class="absolute left-6 w-4 h-4 bg-muted rounded-full border-4 border-background hidden md:block"></div>
+                        <div class="md:ml-16 bg-card rounded-xl p-6 shadow-lg w-full">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-xl font-semibold text-card-foreground">Help Desk Specialist</h3>
+                                <span class="text-sm text-muted-foreground bg-secondary px-3 py-1 rounded-full">05/2019 - 08/2020</span>
+                            </div>
+                            <p class="text-primary font-medium mb-3">Bino Kids</p>
+                            <ul class="text-muted-foreground space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-500 mt-1 text-sm"></i>
+                                    <span>Installed, configured, and troubleshot hardware and software systems</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-500 mt-1 text-sm"></i>
+                                    <span>Monitored and maintained network infrastructure including switches and routers</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-500 mt-1 text-sm"></i>
+                                    <span>Managed user accounts and permissions in Active Directory environment</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Data Reporting Analyst -->
+                    <div class="relative flex items-start">
+                        <div class="absolute left-6 w-4 h-4 bg-muted rounded-full border-4 border-background hidden md:block"></div>
+                        <div class="md:ml-16 bg-card rounded-xl p-6 shadow-lg w-full">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-xl font-semibold text-card-foreground">Data Reporting Analyst</h3>
+                                <span class="text-sm text-muted-foreground bg-secondary px-3 py-1 rounded-full">01/2016 - 04/2019</span>
+                            </div>
+                            <p class="text-primary font-medium mb-3">Alexandria Pediatric Center</p>
+                            <ul class="text-muted-foreground space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-500 mt-1 text-sm"></i>
+                                    <span>Monitored and validated data quality and accuracy to maintain data integrity for reporting purposes</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-green-500 mt-1 text-sm"></i>
+                                    <span>Developed comprehensive reports for healthcare management and decision-making</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-muted px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Education</h2>
+                <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    Strong academic foundation in computer science and technology
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-card rounded-xl p-8 shadow-lg">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <div class="flex items-center gap-4 mb-4 md:mb-0">
+                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+                                <i class="fas fa-graduation-cap text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-card-foreground">Bachelor's Degree in Computer Science</h3>
+                                <p class="text-primary font-medium">Alexandria University</p>
+                            </div>
+                        </div>
+                        <span class="text-muted-foreground bg-primary/10 px-4 py-2 rounded-full font-medium">
+                            2011 - 2023
+                        </span>
+                    </div>
+                    <p class="text-muted-foreground">
+                        Comprehensive study of computer science fundamentals including programming, algorithms, data structures, 
+                        software engineering, and system design. Strong foundation in mathematics and analytical problem-solving.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Get In Touch</h2>
+                <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                    Ready to discuss your next cloud infrastructure project or DevOps transformation? Let's connect!
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="bg-card rounded-xl p-6 shadow-lg">
+                        <h3 class="text-xl font-semibold text-card-foreground mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-card-foreground">Email</p>
+                                    <a href="mailto:mohamed.shaheed.mm@gmail.com" class="text-primary hover:underline">mohamed.shaheed.mm@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-phone text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-card-foreground">Phone</p>
+                                    <a href="tel:+201016673396" class="text-primary hover:underline">+20 1016673396</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-card-foreground">Location</p>
+                                    <p class="text-muted-foreground">Alexandria, Egypt</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                                    <i class="fab fa-linkedin text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-card-foreground">LinkedIn</p>
+                                    <a href="https://www.linkedin.com/in/mohamed-magdy-5051611a0/" target="_blank" class="text-primary hover:underline">Professional Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-card rounded-xl p-6 shadow-lg">
+                        <h3 class="text-xl font-semibold text-card-foreground mb-4">Languages</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium text-card-foreground">Arabic</span>
+                                <span class="text-muted-foreground">Native</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-medium text-card-foreground">English</span>
+                                <span class="text-muted-foreground">B2 (Upper Intermediate)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-card rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold text-card-foreground mb-6">Send Message</h3>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-card-foreground mb-2">Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-3 py-2 border border-border rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-card-foreground mb-2">Email</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-3 py-2 border border-border rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-card-foreground mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                class="w-full px-3 py-2 border border-border rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-card-foreground mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-3 py-2 border border-border rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-vertical"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                            class="w-full bg-primary text-primary-foreground py-3 px-6 rounded-lg hover:bg-primary/90 transition-colors font-medium">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-card border-t border-border py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <p class="text-muted-foreground mb-4">
+                    © 2024 Mohamed Magdy Mahmoud. All rights reserved.
+                </p>
+                <div class="flex justify-center space-x-6">
+                    <a href="mailto:mohamed.shaheed.mm@gmail.com" class="text-muted-foreground hover:text-primary transition-colors">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohamed-magdy-5051611a0/" target="_blank" class="text-muted-foreground hover:text-primary transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="tel:+201016673396" class="text-muted-foreground hover:text-primary transition-colors">
+                        <i class="fas fa-phone text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            // Theme Toggle Functionality
+            const themeToggle = document.getElementById('theme-toggle');
+            const htmlElement = document.documentElement;
+            
+            // Check for saved theme preference or default to light mode
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                htmlElement.classList.add('dark');
+            }
+            
+            themeToggle.addEventListener('click', () => {
+                htmlElement.classList.toggle('dark');
+                const currentTheme = htmlElement.classList.contains('dark') ? 'dark' : 'light';
+                localStorage.setItem('theme', currentTheme);
+            });
+            
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            
+            // Download CV Functionality
+            const downloadCvBtn = document.getElementById('download-cv');
+            downloadCvBtn.addEventListener('click', () => {
+                // TODO: Replace with actual CV file URL
+                const cvUrl = 'path/to/mohamed-magdy-cv.pdf';
+                const link = document.createElement('a');
+                link.href = cvUrl;
+                link.download = 'Mohamed_Magdy_Mahmoud_CV.pdf';
+                link.click();
+                
+                // For demo purposes, show an alert
+                alert('CV download will be available soon. Please contact me directly for the latest version.');
+            });
+            
+            // Contact Form Handling
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // TODO: Implement actual form submission logic
+                // This could integrate with services like Formspree, Netlify Forms, etc.
+                
+                const formData = new FormData(contactForm);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const subject = formData.get('subject');
+                const message = formData.get('message');
+                
+                // Basic form validation
+                if (!name || !email || !subject || !message) {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+                
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+                
+                // For demo purposes, show success message
+                alert('Thank you for your message! I will get back to you soon.');
+                contactForm.reset();
+                
+                // TODO: Replace with actual form submission
+                // Example: Submit to backend API or email service
+                /*
+                fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        subject: subject,
+                        message: message
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert('Message sent successfully!');
+                    contactForm.reset();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error sending message. Please try again.');
+                });
+                */
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in-up');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe sections for animation
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+            
+        })();
+    </script>
+</body>
+</html>
