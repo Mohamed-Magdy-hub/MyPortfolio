@@ -6,7 +6,7 @@
   "scripts": {
     "build-frontend": "vite build && cp dist/public/index.html dist/public/404.html",
     "predeploy": "npm run build-frontend",
-    "deploy": "gh-pages -d dist/public"
+    "deploy": "gh-pages -d dist/public",
     "dev": "NODE_ENV=development tsx server/index.ts",
     "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
     "start": "NODE_ENV=production node dist/index.js",
@@ -101,7 +101,7 @@
     "tailwindcss": "^3.4.17",
     "tsx": "^4.19.1",
     "typescript": "5.6.3",
-    "vite": "^5.4.19"
+    "vite": "^5.4.20"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.8"
